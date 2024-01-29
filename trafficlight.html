@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traffic Lights</title>
+    <style> 
+        .container_btn
+        {
+            margin-bottom: 5px;
+        }
+        .container_btn button
+        {
+            width: 50px;
+            height: 25px;
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+        .container_column 
+        {
+            align-items: center;
+            padding: 20px;
+            float: left;
+            border-radius: 5px;
+            display: flex;
+        }
+        .container_column .greenl {
+            width: 25px;
+            height: 25px;
+            padding: 5px;
+            border-radius: 50%;
+            margin: 10px;
+            background-color: gray;
+        }
+        .container_column .redl {
+            width: 25px;
+            height: 25px;
+            padding: 5px;
+            border-radius: 50%;
+            margin: 10px;
+            background-color: gray;
+        }
+        .container_column .yellowl {
+            width: 25px;
+            height: 25px;
+            padding: 5px;
+            border-radius: 50%;
+            margin: 10px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container_btn">
+            <button onclick="Redlight()">Red</button>
+            <button onclick="Yellowlight()">Yellow</button>
+            <button onclick="Greenlight()">Green</button>
+        </div>
+        <div class="container_column">
+            <div id="red" class="redl"></div>
+            <div id="yellow" class="yellowl"></div>
+            <div id="green" class="greenl"></div>
+        </div>    
+    </div>     
+    <script language="javascript" type="text/javascript">
+        function Greenlight() {
+            var greenLight = document.getElementById("green");
+            var redLight = document.getElementById("red");
+            var yellowLight = document.getElementById("yellow");
+
+            greenLight.style.backgroundColor = "green";
+            redLight.style.backgroundColor = "gray";
+            yellowLight.style.backgroundColor = "gray";
+        }
+        function Redlight() {
+            var greenLight = document.getElementById("green");
+            var redLight = document.getElementById("red");
+            var yellowLight = document.getElementById("yellow");
+
+            greenLight.style.backgroundColor = "gray";
+            redLight.style.backgroundColor = "red";
+            yellowLight.style.backgroundColor = "gray";
+        }
+        function Yellowlight() {
+            var greenLight = document.getElementById("green");
+            var redLight = document.getElementById("red");
+            var yellowLight = document.getElementById("yellow");
+
+            greenLight.style.backgroundColor = "gray";
+            redLight.style.backgroundColor = "gray";
+            yellowLight.style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+</html>
